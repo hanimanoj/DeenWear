@@ -1,0 +1,240 @@
+h3 {
+  font-size: 18.7px;
+}
+
+/*increase and decrease button for quantity*/
+.quantityButton {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.quantityButton:hover {
+  cursor: pointer;
+}
+
+form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+input#number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/*increase and decrease button for quantity*/
+
+/*--------------------------------------------------------------*/
+
+/*style for product picture and details*/
+.product {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+.product img {
+  max-width: 50%;
+  height: auto;
+
+}
+.sizeButton {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+.sizeButton.active {
+  background: #a1acb2;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.sizeChart img {
+  max-width: 40%;
+  height: auto;
+
+}
+
+/*style for product picture and details*/
+
+/*--------------------------------------------------------------*/
+/*add to cart button style*/
+
+#addToCartButton {
+  background-color: #fce4ec;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#addToCartButton:hover {
+  background-color: #E1ABAC;
+}
+/*add to cart button style*/
+
+/*--------------------------------------------------------------*/
+/*product description style*/
+#productDesc {
+  text-align: justify;
+}
+/*product description style*/
+
+/* General responsive styles */
+@media (max-width: 1024px) { /* Tablet and smaller */
+  .product {
+    max-width: 100%; /* Allow full width */
+    padding: 0 20px; /* Add some padding */
+  }
+
+  .product img {
+    max-width: 70%; /* Reduce image size for tablets */
+    height: auto;
+  }
+
+  .sizeButton {
+    margin: 5px;
+    padding: 8px;
+    font-size: 14px; /* Adjust button size */
+  }
+
+  .sizeChart img {
+    max-width: 60%; /* Adjust size chart image for tablets */
+    height: auto;
+  }
+
+  #addToCartButton {
+    font-size: 14px; /* Slightly smaller button text */
+    padding: 8px 16px; /* Adjust padding */
+  }
+
+  h3 {
+    font-size: 16px; /* Adjust heading size for tablets */
+  }
+
+  .quantityButton {
+    width: 35px; /* Reduce button size */
+    height: 18px;
+    padding: 8px 0;
+  }
+
+  input#number {
+    width: 35px; /* Adjust input size */
+    height: 35px;
+  }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .product img {
+    max-width: 90%; /* Make image fill most of the screen */
+    height: auto;
+  }
+
+  .sizeButton {
+    padding: 6px; /* Smaller padding for buttons */
+    font-size: 12px; /* Smaller text size */
+  }
+
+  .sizeChart img {
+    max-width: 80%; /* Reduce image size further for mobiles */
+    height: auto;
+  }
+
+  #addToCartButton {
+    font-size: 12px; /* Smaller button text */
+    padding: 6px 12px; /* Adjust padding */
+  }
+
+  h3 {
+    font-size: 14px; /* Further reduce heading size */
+  }
+
+  .quantityButton {
+    width: 30px; /* Reduce button size */
+    height: 16px;
+    padding: 6px 0;
+  }
+
+  input#number {
+    width: 30px; /* Adjust input size */
+    height: 30px;
+  }
+
+  #productDesc {
+    font-size: 14px; /* Adjust description font size */
+    text-align: left; /* Align text for better readability */
+  }
+}
+
+/* Mobile (small phones) */
+@media (max-width: 480px) {
+  .product img {
+    max-width: 100%; /* Full width for smaller screens */
+  }
+
+  .sizeButton {
+    padding: 4px;
+    font-size: 10px;
+  }
+
+  #addToCartButton {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  .quantityButton {
+    width: 25px;
+    height: 14px;
+    padding: 5px 0;
+  }
+
+  input#number {
+    width: 25px;
+    height: 25px;
+  }
+
+  #productDesc {
+    font-size: 12px; /* Smaller text for better fit */
+  }
+}

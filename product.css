@@ -1,0 +1,244 @@
+h3{
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+
+.type1, .type2, .type3 {
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.kurung, .abaya, .blouse, .palazo, .skirt, .extender, .shawl, .bawal, .instant {
+  margin-left: 50px;
+  font-size: 16px;
+  color: black;
+  display: block;
+  padding-left: 42px;
+  padding-top: 20px;  /* Add some top padding for spacing */
+  padding-bottom: 20px; /* Add some bottom padding */
+  border-bottom: 1px solid #ccc; /* Border to separate from footer */
+}
+
+.kurung-items, .abaya-items, .blouse-items, .palazo-items, .skirt-items, .extender-items,.shawl-items, .bawal-items, .instant-items {
+  display: flex; /* Makes the kurung1, kurung2, kurung3 appear in a row */
+  flex-wrap: wrap; /* Ensures the items wrap to the next line if needed */
+  gap: 80px; /* Adds spacing between the items */
+  padding-left: 10px;
+}
+
+.kurung1 img, .kurung2 img, .kurung3 img, .abaya1 img, .abaya2 img, .abaya3 img, .blouse1 img, .blouse2 img, .blouse3 img,
+.palazo1 img, .palazo2 img, .palazo3 img, .skirt1 img, .skirt2 img, .skirt3 img, .extender1 img, .extender2 img, .extender3 img,
+.shawl1 img, .shawl2 img, .shawl3 img, .bawal1 img, .bawal2 img, .bawal3 img, .instant1 img, .instant2 img, .instant3 img {
+  width: 200px; /* Adjust the width to make the image smaller */
+  height: 200px; /* Fix the aspect ratio */
+  border-radius: 15px; /* Makes the image corners rounded */
+  display: block; /* Ensures proper spacing and alignment */
+  margin-bottom: 10px; /* Adds some space below the image */
+}
+
+.kurung1, .kurung2, .kurung3, .abaya1, .abaya2, .abaya3, .blouse1, .blouse2, .blouse3,
+.palazo1, .palazo2, .palazo3, .skirt1, .skirt2, .skirt3, .extender1, .extender2, .extender3,
+.shawl1, .shawl2, .shawl3, .bawal1, .bawal2, .bawal3, .instant1, .instant2, .instant3 {
+  margin-left: 20px;
+  color: black;
+  text-align: center; /* Centers the text below each image */
+  flex: 1; /* Ensures equal space for each item */
+  max-width: 200px; /* Limits the width of each item */
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  background-color: #D9D9D9;
+  border-radius: 15px;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between; /* This will place logos on the left and right */
+  padding: 10px;
+  background-color: #F3F4FE;
+}
+
+.black-line {
+  border: none; /* Remove default border */
+  border-top: 1px solid black;  /* Change color as needed */
+  margin: 0;
+  padding: 0;
+}
+
+.follow-us {
+   margin-top: -76px;
+   text-align: center;
+   display: flex;
+   justify-content: center; /* Horizontally center the text */
+   align-items: center; /* Vertically center the text if needed */
+   flex-direction: column; /* Ensure any additional elements stack vertically */
+   margin-left: 0; /* Remove unintended left margin */
+}
+.logo1 img, .logo2 img {
+  height: 100px;
+  width: 200px;
+}
+
+.social-media {
+  margin-top: 8px;
+  margin-left: 27px;
+  display: flex;
+  gap: 30px;  /* Space out the icons */
+  justify-content: center;
+}
+
+.social-media img {
+  height: 20px;
+  width: 20px;
+}
+
+.contact {
+  text-align: center; /* Center the entire contact section */
+  margin-top: -15px;
+}
+
+.contact h3 {
+  margin-left: 30px;
+  margin-bottom: 2px;
+}
+
+.contact-via {
+  display: flex;
+  flex-direction: column; /* Stack contact options vertically */
+  align-items: flex-start; /* Center all items horizontally */
+  gap: 0px;
+}
+
+.contact-via a {
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  text-decoration: none; /* Remove link underline */
+  color: black; /* Default text color */
+  font-size: 10px; /* Font size for text */
+  line-height: 1;
+  gap: 10px; /* Space between icon and text */
+}
+
+.contact-via a:hover {
+  color: #d8a7a0; /* Change text color on hover */
+}
+
+.contact-via img {
+  margin-left: 50px;
+  height: 15px; /* Icon size */
+  width: 15px;
+}
+
+.bottom-line {
+  border: none; /* Remove default border */
+  border-top: 20px solid #d8a7a0;  /* Change color as needed */
+  margin: 0;
+  padding: 0;
+}
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  h3{
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo1 img, .logo2 img {
+    height: 80px;
+    width: 160px;
+    margin-bottom: 10px;
+  }
+
+  .follow-us h3{
+    text-align: center;
+    margin-left: 0;
+    margin-top: 80px;
+  }
+
+  .social-media {
+    gap: 15px;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+
+  .contact {
+    margin-bottom: 10px;
+  }
+
+  .contact h3 {
+    margin-left: 0;
+  }
+
+  .contact-via {
+    display: flex;
+    flex-direction: column; /* Stack contact options vertically */
+    align-items: center; /* Center all items horizontally */
+    gap: 2px;
+  }
+
+  .contact-via a {
+    font-size: 12px;
+    gap: 5px;
+  }
+}
+
+/* Phone (480px and below) */
+@media (max-width: 480px) {
+  h3{
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .logo1 img, .logo2 img {
+    height: 60px;
+    width: 120px;
+  }
+
+  .follow-us h3{
+    text-align: center;
+    margin-left: 0;
+    margin-top: 80px;
+  }
+
+  .social-media {
+    gap: 15px;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+
+  .contact {
+    margin-bottom: 10px;
+  }
+
+  .contact-via {
+    display: flex;
+    flex-direction: column; /* Stack contact options vertically */
+    align-items: center; /* Center all items horizontally */
+    gap: 2px;
+  }
+
+  .contact-via a {
+    font-size: 10px;
+    gap: 3px;
+  }
+
+  .contact-via img {
+    margin-left: 0;
+  }
+}

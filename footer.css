@@ -1,0 +1,159 @@
+.footer {
+  display: flex;
+  justify-content: space-between; /* Place logos on the left and right */
+  padding: 10px;
+  background-color: #F3F4FE;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.black-line {
+  margin-top: 20px;
+  border: none; /* Remove default border */
+  border-top: 1px solid black; /* Change color as needed */
+  padding: 0;
+}
+
+.follow-us {
+  margin-top: -15px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.logo1 img, .logo2 img {
+  height: 100px;
+  width: 200px;
+}
+
+.social-media {
+  margin-top: -11px;
+  margin-left: -3px;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Space out the icons */
+}
+
+.social-media img {
+  height: 20px;
+  width: 20px;
+}
+
+.contact {
+  text-align: center; /* Center the entire contact section */
+  margin-top: -15px;
+}
+
+.contact h3 {
+  margin-left: 30px;
+  margin-bottom: 2px;
+}
+
+.contact-via {
+  display: flex;
+  flex-direction: column; /* Stack contact options vertically */
+  align-items: flex-start; /* Center all items horizontally */
+  gap: 0px;
+}
+
+.contact-via a {
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  text-decoration: none; /* Remove link underline */
+  color: black; /* Default text color */
+  font-size: 10px; /* Font size for text */
+  line-height: 1;
+  gap: 10px; /* Space between icon and text */
+}
+
+.contact-via a:hover {
+  color: #d8a7a0; /* Change text color on hover */
+}
+
+.contact-via img {
+  margin-left: 50px;
+  height: 15px; /* Icon size */
+  width: 15px;
+}
+
+.bottom-line {
+  border: none; /* Remove default border */
+  border-top: 20px solid #d8a7a0; /* Change color as needed */
+  margin: 0;
+  padding: 0;
+}
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo1 img, .logo2 img {
+    height: 80px;
+    width: 160px;
+    margin-bottom: 10px;
+  }
+
+  .social-media {
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+
+  .contact {
+    margin-bottom: 10px;
+  }
+
+  .contact h3 {
+    margin-left: 0;
+  }
+
+  .contact-via {
+    display: flex;
+    flex-direction: column; /* Stack contact options vertically */
+    align-items: center; /* Center all items horizontally */
+    gap: 2px;
+  }
+
+  .contact-via a {
+    font-size: 12px;
+    gap: 5px;
+  }
+}
+
+/* Phone (480px and below) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .logo1 img, .logo2 img {
+    height: 60px;
+    width: 120px;
+  }
+
+  .social-media {
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+
+  .contact {
+    margin-bottom: 10px;
+  }
+
+  .contact-via {
+    display: flex;
+    flex-direction: column; /* Stack contact options vertically */
+    align-items: center; /* Center all items horizontally */
+    gap: 2px;
+  }
+
+  .contact-via a {
+    font-size: 10px;
+    gap: 3px;
+  }
+
+  .contact-via img {
+    margin-left: 0;
+  }
+}

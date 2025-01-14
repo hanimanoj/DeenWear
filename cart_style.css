@@ -1,0 +1,100 @@
+/* Default styles for larger screens (desktop) */
+.cart h2, .cart main, .cart h3, .cart a {
+  padding-left: 20px;
+}
+
+.cartItem button {
+  background-color: #fce4ec;
+  color: black;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.cartItem button:hover {
+  background-color: #E1ABAC;
+}
+
+.productImage {
+  width: 300px;
+  height: auto;
+  margin-left: 0;
+  margin-bottom: 5px;
+}
+
+.productDetails {
+  flex: 1;
+}
+
+.productDetails h4 {
+  margin: 0 0 10px 0;
+}
+
+.productDetails p {
+  flex: 1;
+}
+
+/* Responsive Design */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .cart h2, .cart main, .cart h3, .cart a {
+    padding-left: 10px;  /* Adjust padding for smaller screens */
+  }
+
+  .cartItem button {
+    padding: 8px 15px;  /* Increase button size for better visibility */
+    margin-top: 8px;    /* Reduce top margin */
+    margin-bottom: 15px; /* Reduce bottom margin */
+  }
+
+  .productImage {
+    width: 70%;  /* Make product image responsive */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .productDetails {
+    display: block;  /* Stack product details vertically */
+    margin-top: 10px;  /* Add space between image and details */
+  }
+
+  .productDetails h4 {
+    font-size: 16px;  /* Reduce font size for smaller screens */
+  }
+
+  .productDetails p {
+    font-size: 14px;  /* Adjust text size for readability */
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .cart h2, .cart main, .cart h3, .cart a {
+    padding-left: 5px;  /* Further reduce padding on very small screens */
+  }
+
+  .cartItem button {
+    padding: 6px 12px;  /* Smaller button size for phones */
+    margin-top: 6px;    /* Further reduce margins */
+    margin-bottom: 12px;
+  }
+
+  .productImage {
+    width: 70%;  /* Full width for product image on small screens */
+  }
+
+  .productDetails {
+    display: block;  /* Ensure product details stack vertically */
+    margin-top: 8px;
+  }
+
+  .productDetails h4 {
+    font-size: 14px;  /* Smaller font size for small screens */
+  }
+
+  .productDetails p {
+    font-size: 12px;  /* Adjust text size for readability on mobile */
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurun Amina Black</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="addToCart_style.css">
+  <link rel="stylesheet" href="product.css"> <!--footer-->
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="header.css">
+</head>
+<body>
+
+<!--header-->
+<div class="top-line" >
+  <p class="promo-text">RM 50 OFF FOR NEW MEMBER</p>
+</div>
+<header>
+
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="DeenWear Logo">
+    </a>
+  </div>
+
+  <nav>
+    <div class="dropdown">
+      <select id="productslist" name="list" onchange="navigateToPage()">
+        <option value="" disabled selected>PRODUCTS</option>
+        <option value="DeenAttirePage.html">DeenAttire</option>
+        <option value="DeenBottomsPage.html">DeenBottoms</option>
+        <option value="DeenScarfPage.html">DeenScarf</option>
+      </select>
+    </div>
+
+    <div>
+      <a href="AboutUsPage.html">
+        <button class="about-us">ABOUT US</button>
+      </a>
+    </div>
+  </nav>
+
+  <div class="icon">
+    <div class="icon">
+      <img id="search-icon" src="SearchIcon.png" alt="Search Icon" style="cursor: pointer;">
+      <!-- Search bar container -->
+      <div class="search-container">
+        <input type="text" id="searchBar" class="search-bar" placeholder="Search..." autocomplete="off">
+        <!-- Suggestions for products -->
+        <div id="suggestions" class="suggestions" style="display: none;">
+          <!-- Example of a product suggestion -->
+          <div class="suggestion-item">
+            <a href="product-page-url">
+              <div class="suggestion-content">
+                <img src="product-image-url" alt="Product Name">
+                <div class="product-details">
+                  <h4>Product Name</h4>
+                  <p>$Price</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div> <!-- End of suggestions -->
+      </div>
+
+      <a href="javascript:void(0);" onclick="checkAndRedirectToProfile()">
+        <img src="ProfileIcon.png" alt="ProfileIcon">
+      </a>
+      <a href="cart.html">
+        <img src="PaperBag.png" alt="PaperBagIcon" onlclick="goToCart()">
+      </a>
+    </div>
+  </div>
+</header>
+<!--header-->
+
+<!--body = add to cart-->
+<main>
+  <h3>Products > DeenAttire > Kurung Amina Black </h3>
+  <div class="product">
+    <img src="KurungAminaBlack.png" alt="Kurung Amina Black">
+    <h2>Kurung Amina Black</h2>
+    <p>RM70.00</p>
+    <p>Size</p>
+    <div class="size">
+      <button class="sizeButton" data-size="XS">XS</button>
+      <button class="sizeButton" data-size="S">S</button>
+      <button class="sizeButton" data-size="M">M</button>
+      <button class="sizeButton" data-size="L">L</button>
+      <button class="sizeButton" data-size="XL">XL</button>
+      </div>
+    <p>Quantity</p>
+    <div class="quantityButton" id="decrease" onclick="decreaseQuantity()" value="Decrease Quantity">-</div>
+  <input type="number" id="number" value="0" />
+  <div class="quantityButton" id="increase" onclick="increaseQuantity()" value="Increase Quantity">+</div>
+
+  <button id="addToCartButton" onclick="addToCart('Kurung Amina Black', 70.00, 'KurungAminaBlack.png')">Add To Cart</button>
+  <h3 id="addToCart"></h3>
+
+<br>
+  <p id="productDesc">
+  Product Description :
+  Our Baju Kurung collection offers a timeless blend of tradition and elegance. Crafted with attention to detail, each piece features delicate fabrics and exquisite designs, perfect for any occasion. Whether you're celebrating a festive event or simply embracing cultural heritage, our Baju Kurung brings comfort, style, and sophistication to your wardrobe. Available in a variety of colors and sizes to suit every taste.
+</p>
+<br>
+
+<div class="sizeChart">
+<p>Size Chart :</p>
+<img src="sizeChart.png" alt="Size Chart">
+</div>
+<br>
+
+
+</div>
+</main>
+
+<!--body = add to cart-->
+
+<!--footer-->
+<div class="black-line" ></div>
+<div class="footer">
+  <div class="logo1">
+    <img src="logo.png" alt"DeanWear Logo">
+  </div>
+
+  <div class="follow-us">
+    <h3>FOLLOW US</h3>
+    <div class="social-media">
+      <a href="https://www.instagram.com/_deenwear_/profilecard/?igsh=a204cGNiajJuZ3Q2">
+        <img src="IgIcon.png" alt="InstagramIcon">
+      </a>
+      <a href="https://www.tiktok.com/@_deenwear_">
+        <img src="TiktokIcon.png" alt="TiktokIcon">
+      </a>
+      <a href="https://x.com/deenwear_?s=11">
+        <img src="XIcon.png" alt="XIcon">
+      </a>
+    </div>
+  </div>
+
+  <div class="contact">
+    <h3>CONTACT</h3>
+    <div class="contact-via">
+      <a href="tel:+60324446666">
+        <img src="CallIcon.png" alt="CallIcon">
+        <p>+603 2444 6666</p>
+      </a>
+      <a href="mainto:deenwear_@gmail.com">
+        <img src="EmailIcon.png" alt="EmailIcon">
+        <p>deenwear_@gmail.com</p>
+      </a>
+      <a href="https://maps.app.goo.gl/3NEjan74TCtBbDcH6">
+        <img src="LocationIcon.png" alt="LocationIcon">
+        <p>DeenWear @ IIUM Student Mall</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="logo2">
+    <img src="logo.png" alt"DeanWear Logo">
+  </div>
+</div>
+<div class="bottom-line" ></div>
+<!--footer-->
+
+<!-- Slick Carousel JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="addToCart_script.js"></script>
+  <script src="header.js"></script>
+  <script src="search.js"></script>
+  </body>
+  </html>

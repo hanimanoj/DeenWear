@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="Login.css"> <!--header include-->
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="seacrh.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+  <div class="top-line" >
+    <p class="promo-text">RM 50 OFF FOR NEW MEMBER</p>
+  </div>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="DeenWear Logo">
+      </a>
+    </div>
+
+    <nav>
+      <div class="dropdown">
+        <select id="productslist" label="PRODUCTS" name="list" onchange="navigateToPage()">
+          <option value="" disable selected>PRODUCTS</option>
+          <option value="DeenAttirePage.html">DeenAttire</option>
+          <option value="DeenBottomsPage.html">DeenBottoms</option>
+          <option value="DeenScarfPage.html">DeenScarf</option>
+        </select>
+      </div>
+
+      <div>
+        <a href="AboutUsPage.html">
+          <button class="about-us">ABOUT US</button>
+        </a>
+      </div>
+    </nav>
+
+    <div class="icon">
+      <img src="SearchIcon.png" alt="SearchIcon">
+      <a href="javascript:void(0);" onclick="checkAndRedirectToProfile()">
+        <img src="ProfileIcon.png" alt="ProfileIcon">
+      </a>
+      <a href="cart.html">
+        <img src="PaperBag.png" alt="PaperBagIcon" onlclick="goToCart()">
+      </a>
+    </div>
+
+  </header>
+
+  <div class="login-signup-wrapper">
+    <div class="login-signup-container">
+      <div class="toggle-buttons">
+        <button id="login-button" class="active" onclick="toggleForm('login')">Login</button>
+        <button id="signup-button" onclick="toggleForm('signup')">Sign Up</button>
+      </div>
+
+      <form id="login-form" class="active" onsubmit="login(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6">
+
+        <button type="submit">Login</button>
+      </form>
+
+      <form id="signup-form" class="hidden">
+        <label for="email-signup">Email:</label>
+        <input type="email" id="email-signup" name="email-signup" required>
+
+        <label for="username-signup">Username:</label>
+        <input type="text" id="username-signup" name="username-signup" required>
+
+        <label for="password-signup">Password:</label>
+        <input type="password" id="password-signup" name="password-signup" required minlength="6">
+
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="black-line" ></div>
+  <div class="footer">
+    <div class="logo1">
+      <img src="logo.png" alt"DeanWear Logo">
+    </div>
+
+    <div class="follow-us">
+      <h3>FOLLOW US</h3>
+      <div class="social-media">
+        <a href="https://www.instagram.com/_deenwear_/profilecard/?igsh=a204cGNiajJuZ3Q2">
+          <img src="IgIcon.png" alt="InstagramIcon">
+        </a>
+        <a href="https://www.tiktok.com/@_deenwear_">
+          <img src="TiktokIcon.png" alt="TiktokIcon">
+        </a>
+        <a href="https://x.com/deenwear_?s=11">
+          <img src="XIcon.png" alt="XIcon">
+        </a>
+      </div>
+    </div>
+
+    <div class="contact">
+      <h3>CONTACT</h3>
+      <div class="contact-via">
+        <a href="tel:+60324446666">
+          <img src="CallIcon.png" alt="CallIcon">
+          <p>+603 2444 6666</p>
+        </a>
+        <a href="mailto:deenwear_@gmail.com">
+          <img src="EmailIcon.png" alt="EmailIcon">
+          <p>deenwear_@gmail.com</p>
+        </a>
+        <a href="https://maps.app.goo.gl/3NEjan74TCtBbDcH6">
+          <img src="LocationIcon.png" alt="LocationIcon">
+          <p>DeenWear @ IIUM Student Mall</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="logo2">
+      <img src="logo.png" alt"DeanWear Logo">
+    </div>
+  </div>
+  <div class="bottom-line" ></div>
+
+  <!-- Slick Carousel JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="Login.js"></script>
+  <script src="search.js"></script>
+  <script src="header.js"></script>
+</body>
+</html>

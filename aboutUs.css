@@ -1,0 +1,101 @@
+.about-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex; /* Use Flexbox to align items side-by-side */
+  align-items: center; /* Vertically center the items */
+  padding: 20px;
+  gap: 20px; /* Adds space between the logo and the description */
+}
+
+.about-left {
+  flex: 1; /* Logo takes up 1 part of the space */
+  display: flex;
+  justify-content: center; /* Center the logo horizontally */
+}
+
+.about-right {
+  flex: 2; /* Description takes up 2 parts of the space */
+  padding-left: 8px;
+  padding-right: 100px;
+  text-align: justify;
+}
+
+.about-logo {
+  max-width: 100%; /* Adjust logo size */
+  height: auto;
+}
+
+.about-right h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.about-right p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsive Design */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* Stack the logo and description vertically */
+    padding: 20px 10px; /* Reduce padding for tablet */
+  }
+
+  .about-left {
+    flex: 1;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 20px; /* Add space below the logo */
+  }
+
+  .about-right {
+    flex: 1;
+    text-align: center;
+    padding: 0;
+  }
+
+  .about-right h2 {
+    font-size: 20px;
+  }
+
+  .about-right p {
+    margin: 20px;
+    text-align: center;
+    font-size: 14px; /* Reduce font size for better readability */
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 15px 5px; /* Reduce padding for mobile */
+  }
+
+  .about-left {
+    flex: 1;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 15px; /* Add space below the logo */
+  }
+
+  .about-right {
+    flex: 1;
+    text-align: center;
+    padding: 0;
+  }
+
+  .about-right h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .about-right p {
+    margin: 20px;
+    text-align: center;
+    font-size: 12px; /* Further reduce font size for mobile */
+  }
+}

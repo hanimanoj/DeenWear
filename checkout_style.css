@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.checkoutInfo {
+  flex: 2;
+  padding: 20px;
+  margin-right: auto; /* Align to the right */
+  margin-left: 0; /* Align to the right */
+}
+
+.checkoutInfo h3 {
+  margin: 0;
+}
+
+.orderSummary {
+  flex: 1;
+  background: #fce4ec;
+  padding: 20px;
+  color: #333;
+  border-left: 1px solid #ddd;
+  min-width: 300px;
+}
+
+h1, h2, h3 {
+  margin: 10px 0;
+}
+
+form ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+form ul li {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea, form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+.total {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Order Summary */
+.orderItem h4 {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.orderItem p {
+  margin: 2px 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.total {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 20px;
+  border-top: 2px solid #ccc;
+}
+
+.productImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+/* Payment Method */
+fieldset {
+  border: none;
+  margin-top: 20px;
+}
+
+legend {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack the checkout info and order summary vertically */
+  }
+
+  .checkoutInfo, .orderSummary {
+    flex: 1; /* Allow both sections to take full width */
+    margin-bottom: 20px; /* Add space between the two sections */
+  }
+
+  .orderSummary {
+    margin-left: 0; /* Remove left margin to ensure it fits well */
+    min-width: 0; /* Allow the order summary to shrink */
+  }
+
+  h1, h2, h3 {
+    font-size: 1.2em; /* Adjust heading sizes for better readability */
+  }
+
+  .productImage {
+    width: 60px; /* Reduce product image size */
+    height: 60px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0; /* Reduce container padding for mobile */
+  }
+
+  .checkoutInfo, .orderSummary {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .orderSummary {
+    margin-left: 0;
+  }
+
+  h1, h2, h3 {
+    font-size: 1em; /* Further reduce font size for mobile */
+  }
+
+  .productImage {
+    width: 50px; /* Further reduce product image size */
+    height: 50px;
+  }
+
+  form button {
+    padding: 12px; /* Adjust button padding */
+    font-size: 14px;
+  }
+
+  .total {
+    font-size: 1.1em; /* Adjust total font size */
+  }
+}

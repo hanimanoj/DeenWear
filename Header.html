@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Header</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+  <div class="top-line" >
+    <p class="promo-text">RM 50 OFF FOR NEW MEMBER</p>
+  </div>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="DeenWear Logo">
+      </a>
+    </div>
+
+    <nav>
+      <div class="dropdown">
+        <select id="productslist" label="PRODUCTS" name="list" onchange="navigateToPage()">
+          <option value="" disabled selected>PRODUCTS</option>
+          <option value="DeenAttirePage.html">DeenAttire</option>
+          <option value="DeenBottomsPage.html">DeenBottoms</option>
+          <option value="DeenScarfPage.html">DeenScarf</option>
+        </select>
+      </div>
+
+      <div>
+        <a href="AboutUsPage.html">
+          <button class="about-us">ABOUT US</button>
+        </a>
+      </div>
+    </nav>
+
+    <div class="icon">
+      <div class="icon">
+        <img id="search-icon" src="SearchIcon.png" alt="Search Icon" style="cursor: pointer;">
+        <!-- Search bar container -->
+        <div class="search-container">
+          <input type="text" id="searchBar" class="search-bar" placeholder="Search..." autocomplete="off">
+          <!-- Suggestions for products -->
+          <div id="suggestions" class="suggestions" style="display: none;">
+            <!-- Example of a product suggestion -->
+            <div class="suggestion-item">
+              <a href="product-page-url">
+                <div class="suggestion-content">
+                  <img src="product-image-url" alt="Product Name">
+                  <div class="product-details">
+                    <h4>Product Name</h4>
+                    <p>$Price</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div> <!-- End of suggestions -->
+        </div>
+
+        <a href="javascript:void(0);" onclick="checkAndRedirectToProfile()">
+          <img src="ProfileIcon.png" alt="ProfileIcon">
+        </a>
+        <a href="cart.html">
+          <img src="PaperBag.png" alt="PaperBagIcon" onlclick="goToCart()">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <script src="header.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>

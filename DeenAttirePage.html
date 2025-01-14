@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeenAttire Page</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="product.css"> <!--footer-->
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="header.css">
+
+</head>
+<body>
+  <div class="top-line" >
+    <p class="promo-text">RM 50 OFF FOR NEW MEMBER</p>
+  </div>
+
+  <header>
+    <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="DeenWear Logo">
+    </a>
+  </div>
+
+    <nav>
+      <div class="dropdown">
+        <select id="productslist" name="list" onchange="navigateToPage()">
+          <option value="" disabled selected>PRODUCTS</option>
+          <option value="DeenAttirePage.html">DeenAttire</option>
+          <option value="DeenBottomsPage.html">DeenBottoms</option>
+          <option value="DeenScarfPage.html">DeenScarf</option>
+        </select>
+      </div>
+
+      <div>
+        <a href="AboutUsPage.html">
+          <button class="about-us">ABOUT US</button>
+        </a>
+      </div>
+    </nav>
+
+    <div class="icon">
+      <div class="icon">
+        <img id="search-icon" src="SearchIcon.png" alt="Search Icon" style="cursor: pointer;">
+        <!-- Search bar container -->
+        <div class="search-container">
+          <input type="text" id="searchBar" class="search-bar" placeholder="Search..." autocomplete="off">
+          <!-- Suggestions for products -->
+          <div id="suggestions" class="suggestions" style="display: none;">
+            <!-- Example of a product suggestion -->
+            <div class="suggestion-item">
+              <a href="product-page-url">
+                <div class="suggestion-content">
+                  <img src="product-image-url" alt="Product Name">
+                  <div class="product-details">
+                    <h4>Product Name</h4>
+                    <p>$Price</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div> <!-- End of suggestions -->
+        </div>
+
+        <a href="javascript:void(0);" onclick="checkAndRedirectToProfile()">
+          <img src="ProfileIcon.png" alt="ProfileIcon">
+        </a>
+        <a href="cart.html">
+          <img src="PaperBag.png" alt="PaperBagIcon" onlclick="goToCart()">
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <h3>Products > DeenAttire</h3>
+  <div class="kurung">
+    <h3 class="type1">BAJU KURUNG</h3>
+    <div class="kurung-items">
+      <div class="kurung1">
+        <a href="addToCartKABlack.html">
+          <img src="KurungAminaBlack.png" alt="KurungAminaBlack">
+        </a>
+        <div class="name">Kurung Amina</div>
+        <div class="color">Black</div>
+        <div class="price">RM 70.00</div>
+      </div>
+      <div class="kurung2">
+        <a href="addToCartKABlue.html">
+          <img src="KurungAminaBlue.png" alt="KurungAminaBlue">
+        </a>
+        <div class="name">Kurung Amina</div>
+        <div class="color">Blue</div>
+        <div class="price">RM 70.00</div>
+      </div>
+      <div class="kurung3">
+        <a href="addToCartKABeige.html">
+          <img src="KurungAminaBeige.png" alt="KurungAminaBeige">
+        </a>
+        <div class="name">Kurung Amina</div>
+        <div class="color">Beige</div>
+        <div class="price">RM 70.00</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="abaya">
+    <h3 class="type2">ABAYA</h3>
+    <div class="abaya-items">
+      <div class="abaya1">
+        <a href="addToCartHARose.html">
+          <img src="HannaAbayaDustyRose.png" alt="AbayaDustyRose">
+        </a>
+        <div class="name">Hanna Abaya</div>
+        <div class="color">Dusty Rose</div>
+        <div class="price">RM 90.00</div>
+      </div>
+      <div class="abaya2">
+        <a href="addToCartHAMaroon.html">
+          <img src="HannaAbayaMaroon.png" alt="AbayaMaroon">
+        </a>
+        <div class="name">Hanna Abaya</div>
+        <div class="color">Maroon</div>
+        <div class="price">RM 90.00</div>
+      </div>
+      <div class="abaya3">
+        <a href="addToCartHALilac.html">
+          <img src="HannaAbayaLilac.png" alt="AbayaLilac">
+        </a>
+        <div class="name">Hanna Abaya</div>
+        <div class="color">Lilac</div>
+        <div class="price">RM 90.00</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blouse">
+    <h3 class="type3">BLOUSE</h3>
+    <div class="blouse-items">
+      <div class="blouse1">
+        <a href="addToCartBNBlue.html">
+          <img src="BlouseNurOceanBlue.png" alt="BlouseOceanBlue">
+        </a>
+        <div class="name">Blouse Nur</div>
+        <div class="color">Ocean Blue</div>
+        <div class="price">RM 25.00</div>
+      </div>
+      <div class="blouse2">
+        <a href="addToCartBNGreen.html">
+          <img src="BlouseNurSageGreen.png" alt="BlouseSageGreen">
+        </a>
+        <div class="name">Blouse Nur</div>
+        <div class="color">Sage Green</div>
+        <div class="price">RM 25.00</div>
+      </div>
+      <div class="blouse3">
+        <a href="addToCartBNAlmond.html">
+          <img src="BlouseNurAlmond.png" alt="BlouseAlmond">
+        </a>
+        <div class="name">Blouse Nur</div>
+        <div class="color">Almond</div>
+        <div class="price">RM 25.00</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="black-line" ></div>
+  <div class="footer">
+    <div class="logo1">
+      <img src="logo.png" alt"DeanWear Logo">
+    </div>
+
+    <div class="follow-us">
+      <h3>FOLLOW US</h3>
+      <div class="social-media">
+        <a href="https://www.instagram.com/_deenwear_/profilecard/?igsh=a204cGNiajJuZ3Q2">
+          <img src="IgIcon.png" alt="InstagramIcon">
+        </a>
+        <a href="https://www.tiktok.com/@_deenwear_">
+          <img src="TiktokIcon.png" alt="TiktokIcon">
+        </a>
+        <a href="https://x.com/deenwear_?s=11">
+          <img src="XIcon.png" alt="XIcon">
+        </a>
+      </div>
+    </div>
+
+    <div class="contact">
+      <h3>CONTACT</h3>
+      <div class="contact-via">
+        <a href="tel:+60324446666">
+          <img src="CallIcon.png" alt="CallIcon">
+          <p>+603 2444 6666</p>
+        </a>
+        <a href="mailto:deenwear_@gmail.com">
+          <img src="EmailIcon.png" alt="EmailIcon">
+          <p>deenwear_@gmail.com</p>
+        </a>
+        <a href="https://maps.app.goo.gl/3NEjan74TCtBbDcH6">
+          <img src="LocationIcon.png" alt="LocationIcon">
+          <p>DeenWear @ IIUM Student Mall</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="logo2">
+      <img src="logo.png" alt"DeanWear Logo">
+    </div>
+  </div>
+  <div class="bottom-line" ></div>
+
+  <!-- Slick Carousel JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="header.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>

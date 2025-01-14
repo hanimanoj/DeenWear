@@ -1,0 +1,154 @@
+.login-signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  max-width: 500px;
+  height: auto;
+  min-height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #d8a7a0; /* Background specific for login/signup */
+  margin: auto;
+  padding: 20px;
+}
+
+.login-signup-container {
+  width: 400px;
+  background-color: #f3f4fe;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.login-signup-container.expanded {
+  width: 450px;  /* Slightly increase container size */
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e1abac;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-buttons button.active {
+  background-color: #d8a7a0;
+  color: white;
+}
+
+form {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form.active {
+  display: flex;
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button[type="submit"],
+#continue-signup {
+  padding: 12px;
+  background-color: #ffdafd;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+#continue-signup:hover {
+  background-color: #d8a7a0;
+  color: white;
+}
+
+/* Responsive Design */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .login-signup-wrapper {
+    max-width: 90%;
+    min-height: 250px;
+  }
+
+  .login-signup-container {
+    width: 90%;
+  }
+
+  .toggle-buttons button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .dropdown select, .about-us {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  input, button[type="submit"], #continue-signup {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .login-signup-wrapper {
+    max-width: 95%;
+    min-height: 220px;
+  }
+
+  .login-signup-container {
+    width: 95%;
+  }
+
+  .toggle-buttons button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .dropdown select, .about-us {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  input, button[type="submit"], #continue-signup {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}

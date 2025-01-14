@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomePage</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+  <div class="top-line" >
+    <p class="promo-text">RM 50 OFF FOR NEW MEMBER</p>
+  </div>
+
+  <header>
+    <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="DeenWear Logo">
+    </a>
+  </div>
+
+    <nav>
+      <div class="dropdown">
+        <select id="productslist" name="list" onchange="navigateToPage()">
+          <option value="" disabled selected>PRODUCTS</option>
+          <option value="DeenAttirePage.html">DeenAttire</option>
+          <option value="DeenBottomsPage.html">DeenBottoms</option>
+          <option value="DeenScarfPage.html">DeenScarf</option>
+        </select>
+      </div>
+
+      <div>
+        <a href="AboutUsPage.html">
+          <button class="about-us">ABOUT US</button>
+        </a>
+      </div>
+    </nav>
+
+    <div class="icon">
+      <div class="icon">
+        <img id="search-icon" src="SearchIcon.png" alt="Search Icon" style="cursor: pointer;">
+        <!-- Search bar container -->
+        <div class="search-container">
+          <input type="text" id="searchBar" class="search-bar" placeholder="Search..." autocomplete="off">
+          <!-- Suggestions for products -->
+          <div id="suggestions" class="suggestions" style="display: none;">
+            <!-- Example of a product suggestion -->
+            <div class="suggestion-item">
+              <a href="product-page-url">
+                <div class="suggestion-content">
+                  <img src="product-image-url" alt="Product Name">
+                  <div class="product-details">
+                    <h4>Product Name</h4>
+                    <p>$Price</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div> <!-- End of suggestions -->
+        </div>
+
+        <a href="javascript:void(0);" onclick="checkAndRedirectToProfile()">
+          <img src="ProfileIcon.png" alt="ProfileIcon">
+        </a>
+        <a href="cart.html">
+          <img src="PaperBag.png" alt="PaperBagIcon" onlclick="goToCart()">
+        </a>
+      </div>
+    </div>
+  </header>
+
+<!--body-->
+<main>
+   <div class="carousel-container">
+     <div class="carousel-slide" id="carousel">
+       <a href="DeenAttirePage.html"><img src="DeenAttireHP.png" alt="Deen Attire"></a>
+       <a href="DeenBottomsPage.html"><img src="DeenBottomHP.png" alt="Deen Bottoms"></a>
+       <a href="DeenScarfPage.html"><img src="DeenScarfHP.png" alt="Deen Scarf"></a>
+     </div>
+     <button class="carousel-arrow prev-arrow">&#10094;</button>
+     <button class="carousel-arrow next-arrow">&#10095;</button>
+     <div class="carousel-buttons" id="carouselDots"></div>
+   </div>
+
+<h2 class="customer-reviews-title">BE PART OF OUR JOURNEY</h2>
+
+<section class="review-section">
+  <div class="review-gallery">
+    <div class="review-item">
+        <img src="review1.jpg" alt="Review 1">
+      </div>
+      <div class="review-item">
+        <img src="review2.jpg" alt="Review 2">
+      </div>
+      <div class="review-item">
+        <img src="review3.jpg" alt="Review 3">
+      </div>
+      <div class="review-item">
+        <img src="review4.jpg" alt="Review 4">
+      </div>
+      <div class="review-item">
+        <img src="review5.jpg" alt="Review 5">
+      </div>
+      <div class="review-item">
+        <img src="review6.jpg" alt="Review 6">
+      </div>
+      <div class="review-item">
+        <img src="review7.jpg" alt="Review 7">
+      </div>
+    </div>
+
+  <div class="review-comments">
+    <div class="comment">
+      <p>"This product is amazing! The quality is top-notch!"</p>
+      <p>- Sara</p>
+    </div>
+    <div class="comment">
+      <p>"I love the design! The scarf is perfect for every event."</p>
+      <p>- Aliya</p>
+    </div>
+    <div class="comment">
+      <p>"Very stylish, and the material is very breathable!"</p>
+      <p>- Laila</p>
+    </div>
+  </div>
+</section>
+
+<div class="achievements-section">
+   <h2 class="achievement-title">AS FEATURED ON</h2>
+  <div class="achievements-gallery">
+      <img src="a1.png" alt="Logo 1">
+      <img src="a2.png" alt="Logo 2">
+      <img src="a3.png" alt="Logo 3">
+      <img src="a4.png" alt="Logo 4">
+      <img src="a5.png" alt="Logo 5">
+      <img src="a6.png" alt="Logo 6">
+      <img src="a7.png" alt="Logo 7">
+    </div>
+</div>
+</main>
+<!--body-->
+
+<!--footer-->
+<div class="black-line" ></div>
+<div class="footer">
+  <div class="logo1">
+    <img src="logo.png" alt"DeanWear Logo">
+  </div>
+
+  <div class="follow-us">
+    <h3>FOLLOW US</h3>
+    <div class="social-media">
+      <a href="https://www.instagram.com/_deenwear_/profilecard/?igsh=a204cGNiajJuZ3Q2">
+        <img src="IgIcon.png" alt="InstagramIcon">
+      </a>
+      <a href="https://www.tiktok.com/@_deenwear_">
+        <img src="TiktokIcon.png" alt="TiktokIcon">
+      </a>
+      <a href="https://x.com/deenwear_?s=11">
+        <img src="XIcon.png" alt="XIcon">
+      </a>
+    </div>
+  </div>
+
+  <div class="contact">
+    <h3>CONTACT</h3>
+    <div class="contact-via">
+      <a href="tel:+60324446666">
+        <img src="CallIcon.png" alt="CallIcon">
+        <p>+603 2444 6666</p>
+      </a>
+      <a href="mainto:deenwear_@gmail.com">
+        <img src="EmailIcon.png" alt="EmailIcon">
+        <p>deenwear_@gmail.com</p>
+      </a>
+      <a href="https://maps.app.goo.gl/3NEjan74TCtBbDcH6">
+        <img src="LocationIcon.png" alt="LocationIcon">
+        <p>DeenWear @ IIUM Student Mall</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="logo2">
+    <img src="logo.png" alt"DeanWear Logo">
+  </div>
+</div>
+<div class="bottom-line" ></div>
+<!--footer-->
+
+  <!-- Slick Carousel JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="homepage.js"></script>
+  <script src = "search.js"></script>
+  <script src = "header.js"></script>
+
+</body>
+</html>
